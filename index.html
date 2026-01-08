@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咿呀莎莎 - 沖繩五日遊手冊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6;
+            -webkit-overflow-scrolling: touch;
+        }
+        /* 隱藏滾動條但保持功能 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e5e7eb;
+            z-index: 0;
+        }
+        .snap-container {
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+        .snap-page {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            padding-bottom: 4rem; /* 底部留白 */
+        }
+    </style>
+</head>
+<body class="text-gray-800 bg-gray-100">
+
+    <!-- 手機版外框容器 (模擬手機寬度，但在手機上會滿版) -->
+    <div class="mx-auto max-w-md bg-white shadow-2xl h-screen overflow-hidden relative">
+        
+        <!-- 頂部導航條 (固定) -->
+        <header class="absolute top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm px-4 py-3 flex justify-between items-center">
+            <h1 class="text-lg font-bold text-teal-700 tracking-wide">沖繩之旅 2/1-2/5</h1>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">5天4夜</span>
+        </header>
+
+        <!-- 主要滾動區域 -->
+        <main class="snap-container no-scrollbar pt-14">
+
+            <!-- ================= Day 1 ================= -->
+            <section class="snap-page relative">
+                <!-- 日期封面 -->
+                <div class="relative h-48 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1549645903-a4478f307525?q=80&w=800&auto=format&fit=crop" alt="那霸國際通" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                        <h2 class="text-3xl font-bold text-white">Day 1</h2>
+                        <p class="text-white/90 text-sm mt-1">2/1 (五) · 抵達與那霸散策</p>
+                    </div>
+                </div>
+
+                <!-- 行程內容 -->
+                <div class="px-6 py-8 relative">
+                    <!-- 時間軸線 -->
+                    <div class="timeline-line left-8"></div>
+
+                    <!-- Item 1: 航班 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-teal-500 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-plane-arrival text-teal-600"></i>
+                                <h3 class="font-bold text-lg">抵達那霸機場</h3>
+                            </div>
+                            <div class="text-sm text-gray-600 space-y-1">
+                                <p><span class="font-semibold text-gray-800">虎航 IT232:</span> 18:20 - 20:40</p>
+                                <p><span class="font-semibold text-gray-800">華航 CI0122:</span> 16:50 - 19:20</p>
+                                <div class="mt-2 text-xs bg-yellow-50 text-yellow-800 p-2 rounded">
+                                    <i class="fas fa-info-circle mr-1"></i>
+                                    預計出關時間：21:30
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: 住宿 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-gray-400 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-gray-800 mb-1">前往飯店 Check-in</h3>
+                            <p class="text-sm text-gray-500 mb-2"><i class="fas fa-map-marker-alt mr-1"></i>國際通附近</p>
+                            <div class="text-sm border-l-4 border-blue-500 pl-3 py-1 bg-blue-50">
+                                <span class="font-bold">沖縄サンプラザホテル</span><br>
+                                (Okinawa Sun Plaza Hotel)<br>
+                                <span class="text-xs text-gray-500">牧志站步行約 7 分鐘</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: 晚餐 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-orange-400 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-utensils text-orange-500"></i>
+                                <h3 class="font-bold">晚餐自行覓食</h3>
+                            </div>
+                            <p class="text-sm text-gray-600">素食友善餐廳預計已打烊。</p>
+                            <p class="text-sm text-gray-500 mt-1 italic">「阿嬤要自行覓食 QQ」</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: 散策 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-indigo-400 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-gray-800 mb-2">飯後散步：國際通</h3>
+                            <ul class="text-sm text-gray-600 space-y-2 list-disc list-inside">
+                                <li>唐吉軻德 (Don Quijote)</li>
+                                <li>屋台村 (氣氛體驗)</li>
+                                <li>便利商店買宵夜/早餐</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Day 2 ================= -->
+            <section class="snap-page relative">
+                <div class="relative h-48 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800&auto=format&fit=crop" alt="美國村" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                        <h2 class="text-3xl font-bold text-white">Day 2</h2>
+                        <p class="text-white/90 text-sm mt-1">2/2 (六) · 中部悠閒與美國村</p>
+                    </div>
+                </div>
+
+                <div class="px-6 py-8 relative">
+                    <div class="timeline-line left-8"></div>
+
+                    <!-- Item 1 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow"></div>
+                        <h3 class="font-bold text-gray-800">飯店早餐 & 租車</h3>
+                        <p class="text-sm text-gray-600 mt-1">享用飯店超讚早餐後，領取租車。</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-teal-500 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg text-teal-700">港川外人住宅</h3>
+                            <p class="text-xs text-teal-600 mb-2">文青小店散策</p>
+                            <p class="text-sm text-gray-600">前往民宿 check-in 或寄放行李，接著在此區域午餐與逛街。</p>
+                            <div class="mt-2 p-2 bg-gray-50 rounded text-xs text-gray-500">
+                                <i class="fas fa-home mr-1"></i> 民宿：GREEN HOUSE (近港川外人住宅)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-red-400 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-bold">永旺夢樂城 (Rycom)</h3>
+                                    <p class="text-xs text-gray-500">AEON MALL Okinawa Rycom</p>
+                                </div>
+                                <i class="fas fa-shopping-bag text-gray-300"></i>
+                            </div>
+                            <div class="mt-2 inline-block bg-red-100 text-red-700 px-2 py-1 rounded text-xs font-bold">
+                                重點：寶可夢中心
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-purple-500 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg">北谷美國村</h3>
+                            <p class="text-sm text-gray-600 mt-1">海邊夕陽欣賞，隨後共進晚餐。</p>
+                            
+                            <div class="mt-3 border-t pt-2">
+                                <p class="text-xs font-bold text-gray-500 mb-1">周邊素食參考：</p>
+                                <p class="text-xs text-gray-600">Transit Café (可客製)、SABORAMI (擔擔麵)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Day 3 ================= -->
+            <section class="snap-page relative">
+                <div class="relative h-48 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1599557342898-07d0fb9254c7?q=80&w=800&auto=format&fit=crop" alt="水族館" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                        <h2 class="text-3xl font-bold text-white">Day 3</h2>
+                        <p class="text-white/90 text-sm mt-1">2/3 (日) · 北部景點與水族館</p>
+                    </div>
+                </div>
+
+                <div class="px-6 py-8 relative">
+                    <div class="timeline-line left-8"></div>
+
+                    <!-- Item 1 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow"></div>
+                        <h3 class="font-bold text-gray-800">萬座毛 (Manzamo)</h3>
+                        <p class="text-sm text-gray-600">欣賞象鼻岩與海景。</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-blue-500 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg text-blue-800">美ら海水族館</h3>
+                            <div class="text-sm text-gray-600 mt-2 space-y-2">
+                                <p><i class="far fa-clock mr-1"></i> 預計中午抵達</p>
+                                <p><i class="fas fa-utensils mr-1"></i> 建議在附近午餐後再進入館區</p>
+                            </div>
+                            <div class="mt-2 text-xs text-gray-500 bg-gray-50 p-2 rounded">
+                                名護素食參考：Cookhal (野菜料理)、Hale Noa Café (早午餐)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-orange-400 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold">晚餐行程</h3>
+                            <p class="text-sm text-gray-600 mb-2">選擇名護市區用餐，或返程前往 PARCO CITY。</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-indigo-400 rounded-full border-2 border-white shadow"></div>
+                        <h3 class="font-bold text-gray-800">返回民宿</h3>
+                        <p class="text-sm text-gray-600">視時間可去附近超市逛逛，採買零食伴手禮。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Day 4 ================= -->
+            <section class="snap-page relative">
+                <div class="relative h-48 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1698200676450-80252b47963d?q=80&w=800&auto=format&fit=crop" alt="玉泉洞" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                        <h2 class="text-3xl font-bold text-white">Day 4</h2>
+                        <p class="text-white/90 text-sm mt-1">2/4 (一) · 南部文化與購物</p>
+                    </div>
+                </div>
+
+                <div class="px-6 py-8 relative">
+                    <div class="timeline-line left-8"></div>
+
+                    <!-- Item 1 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-amber-600 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg">沖繩世界 (文化王國・玉泉洞)</h3>
+                            <p class="text-sm text-gray-600 mt-1">東南亞最大鐘乳石洞。</p>
+                            <p class="text-xs text-gray-500 mt-1">註：園區內有咖啡廳可供休息。</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-orange-500 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold">午餐：沖縄そば自慢 なんと屋</h3>
+                            <div class="inline-block mt-1 bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
+                                <i class="fas fa-leaf mr-1"></i>有素食套餐
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg mb-2">購物二選一</h3>
+                            <div class="space-y-2">
+                                <div class="border-l-2 border-gray-300 pl-3">
+                                    <p class="font-semibold text-sm">選項 A: Outlet Mall Ashibinaa</p>
+                                    <p class="text-xs text-gray-500">精品與運動品牌 Outlet</p>
+                                </div>
+                                <div class="border-l-2 border-gray-300 pl-3">
+                                    <p class="font-semibold text-sm">選項 B: iias 沖繩豐崎</p>
+                                    <p class="text-xs text-gray-500">結合 DMM 水族館的購物中心</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-gray-800 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold">晚餐 & 歸還租車</h3>
+                            <p class="text-sm text-gray-600 mb-2">晚餐：燒肉或牛排（慰勞司機）</p>
+                            <p class="text-sm text-red-600 font-bold"><i class="fas fa-car mr-1"></i>還車後搭乘單軌電車至國際通附近</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Day 5 ================= -->
+            <section class="snap-page relative">
+                <div class="relative h-48 bg-gray-200">
+                    <img src="https://images.unsplash.com/photo-1616766579222-63b7dfd4681f?q=80&w=800&auto=format&fit=crop" alt="離境" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                        <h2 class="text-3xl font-bold text-white">Day 5</h2>
+                        <p class="text-white/90 text-sm mt-1">2/5 (二) · 早午餐與返程</p>
+                    </div>
+                </div>
+
+                <div class="px-6 py-8 relative">
+                    <div class="timeline-line left-8"></div>
+
+                    <!-- Item 1 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-yellow-500 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="font-bold text-lg">早餐</h3>
+                            <ul class="text-sm text-gray-600 list-disc list-inside mt-1">
+                                <li>豬肉蛋飯糰 (Pork Tamago Onigiri)</li>
+                                <li>或 附近的咖啡廳</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative pl-10 mb-8">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-gray-500 rounded-full border-2 border-white shadow"></div>
+                        <h3 class="font-bold text-gray-800">前往那霸機場</h3>
+                        <p class="text-sm text-gray-600">搭乘單軌電車前往機場。</p>
+                        <p class="text-xs text-gray-500 mt-1">最後的免稅店伴手禮採買。</p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative pl-10 mb-12">
+                        <div class="absolute left-1.5 top-1 w-4 h-4 bg-teal-600 rounded-full border-2 border-white shadow"></div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 border-l-4 border-l-teal-500">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-plane-departure text-teal-600"></i>
+                                <h3 class="font-bold text-lg">返程航班</h3>
+                            </div>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between border-b pb-1">
+                                    <span>虎航 IT233</span>
+                                    <span class="font-mono font-bold">13:30</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>華航 CI121</span>
+                                    <span class="font-mono font-bold">11:50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 結尾 -->
+                    <div class="text-center pb-8">
+                        <p class="text-gray-400 text-sm">平安抵達台灣 · 旅途愉快！</p>
+                        <p class="text-gray-300 text-xs mt-1">~ 咿呀莎莎 ~</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
